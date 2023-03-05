@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inheritt;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.countdown {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(5, 1fr);
+}
+.timer-box {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.timer-box::after {
+  content: attr(data-unit);
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.9rem;
+}
